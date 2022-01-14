@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone_Dial</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        
+</head>
+<body>
+    <div class="container">
+        <div id="output"> </div>
+        <div class="row"><div class="digit" id="one"><button onclick="my_fuction('1')">1</button></div>
+          <div class="digit" id="two"><button onclick="my_fuction('2')">2</button>
+            <div class="sub">ABC</div>
+          </div>
+          <div class="digit" id="three"><button onclick="my_fuction('3')">3</button>
+            <div class="sub">DEF</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="digit" id="four"><button onclick="my_fuction('4')">4</button>
+            <div class="sub">GHI</div>
+          </div>
+          <div class="digit" id="five"><button onclick="my_fuction('5')">5</button>
+            <div class="sub">JKL</div>
+          </div>
+          <div class="digit" id="six"><button onclick="my_fuction('6')">6</button>
+            <div class="sub">MNO</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="digit" id="seven"><button onclick="my_fuction('7')">7</button>
+            <div class="sub">PQRS</div>
+          </div>
+          <div class="digit" id="eight"><button onclick="my_fuction('8')">8</button>
+            <div class="sub">TUV</div>
+          </div>
+          <div class="digit" id="nine"><button onclick="my_fuction('9')">9</button>
+            <div class="sub">WXYZ</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="digit" id="*"><button onclick="my_fuction('*')">*</button>
+          </div>
+          <div class="digit" id="zero"><button onclick="my_fuction('0')">0</button>
+          </div>
+          <div class="digit" id="#"><button onclick="my_fuction('#')">#</button>
+          </div>
+        </div>
+        <div class="botrow"><i class="" ></i>
+          <div id="call"><i class="fa fa-phone" ></i></div>
+          <i class="fa fa-long-arrow-left dig" onclick="removex()"></i>
+        </div>
+      </div>
+      <script>
+          count=0
+          function my_fuction(a){
+              if(count <= 11){
+              document.getElementById("output").innerHTML+=a;
+              count++;
+              }
+
+          }
+          function removex(){
+              if(count > 0)
+              {
+            document.getElementById("output").innerHTML = document.getElementById("output").innerHTML.slice(0, -1);
+          count--;
+              }
+         }
+          
+      </script>
+</body>
+</html>
